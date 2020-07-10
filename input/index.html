@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8"/>
+  <title>input</title>
+  <script language="javascript" type="text/javascript">
+    function output() {
+        var message = document.getElementById("message").value;
+        input_message = "input value is " + message + ".";
+        document.getElementById("output_message").innerHTML = input_message;
+    }
+  </script>
+</head>
+<body>
+  <form id="main" action="#">
+    <input type="text" id="message" value="">
+    <input type="button" onclick="output()" value="送信">
+  </form>
+  <div id="output_message"></div>
+</body>
+</html>
