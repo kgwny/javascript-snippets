@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <title>count length</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <script language="JavaScript" type="text/JavaScript">
+  function countLength(text, field) {
+    document.getElementById(field).innerHTML = text.length;
+  }
+  </script>
+  </head>
+<body>
+  <p>onChangeしたときに文字数をカウントする</p>
+  <textarea cols="50" rows="10" onChange="countLength(value, 'lengthByChange');"></textarea>
+  <p id="lengthByChange">0</p>
+
+  <p>onKeyUpしたときに文字数をカウントする</p>
+  <textarea cols="50" rows="10" onKeyUp="countLength(value, 'lengthByKeyUp');"></textarea>
+  <p id="lengthByKeyUp">0</p>
+</body>
+</html>

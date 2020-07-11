@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <title>textarea</title>
+</head>
+<body>
+<form name="main">
+<textarea name="memo" value="1" cols="50" rows=5 maxlength="15">test</textarea>
+</form>
+<input type="button" value="submit" onclick="submit()"/>
+<input type="button" value="clear" onclick="clean()"/>
+
+<script>
+function submit(){
+  // テキストエリアに値を書き込む
+  document.main.memo.value = "hogehoge";
+}
+function clean(){
+  // テキストエリアをクリアする
+  document.main.memo.value = "";
+}
+</script>
+</body>
+</html>

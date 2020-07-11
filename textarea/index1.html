@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <title>textarea</title>
+</head>
+<body>
+<p>取得値<span id="value"></span></p>
+<form name="main">
+<textarea name="memo" value="1" cols="50" rows=5 maxlength="15"></textarea>
+</form>
+<input type="button" value="submit" onclick="submit()"/>
+<input type="button" value="clear" onclick="clean()"/>
+
+<script>
+function submit() {
+  // テキストエリアから値を取得し、「取得値」へ値を設定する
+  const memo_value = document.main.memo.value; 
+  document.getElementById("value").textContent = memo_value;
+}
+function clean() {
+  // 「取得値」をクリアする
+  document.getElementById("value").textContent = "";
+}
+</script>
+</body>
+</html>
