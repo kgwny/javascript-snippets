@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>side menu</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/uikit@3.4.2/dist/css/uikit.min.css" />
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/normalize.css@8.0.1/normalize.css">
+<script src="https://cdn.jsdelivr.net/npm/uikit@3.4.2/dist/js/uikit.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/uikit@3.4.2/dist/js/uikit-icons.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/sticky-sidebar@3.3.1/dist/sticky-sidebar.min.js"></script>
+</head>
+<body>
+<div class="uk-width-medium">
+    <div class="uk-panel uk-panel-box">
+        <ul class="uk-nav uk-nav-side uk-nav-parent-icon" data-uk-nav="{multiple:true}">
+            <li class="uk-parent uk-active">
+                <a href="#">Parent 1 (Have Nest and Nest is current)</a>
+                <ul class="uk-nav-sub uk-nav-side">
+                    <li class="uk-active">
+                        <a href="/admin/parent1/nest1">Nest 1 (current)</a>
+                    </li>
+                    <li>
+                        <a href="/admin/parent1/nest2">Nest 2 (not current)</a>
+                    </li>
+                    <li>
+                        <a href="/admin/parent1/nest3">Nest 3 (not current)</a>
+                    </li>
+                </ul>
+            </li>
+            <li>
+                <a href="/admin/parent2">Parent 2 (Not Nest)</a>
+            </li>
+            <li class="uk-parent">
+                <a href="#">Parent 3 (Have Nest but Current nests are nothing)</a>
+                <ul class="uk-nav-sub uk-nav-side">
+                    <li>
+                        <a href="/admin/parent3/nest1">Nest 1 (not current)</a>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+</div>
+</body>
+</html>
