@@ -1,5 +1,5 @@
 // コマンドラインからのjavascript実行コマンド
-// $ osascript -l JavaScript sleep_test.js
+// $ osascript -l JavaScript sleep_test1.js
 
 // 処理時間計測開始
 var start_ms = new Date().getTime();
