@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>テストページ</title>
+<script type="text/javascript">
+function check(obj) {
+    if (!isNumber(obj.value)) {
+        var label = "-";
+        if (document.querySelector('label[for="' + obj.id + '"]')) {
+            label = document.querySelector('label[for="' + obj.id + '"]').textContent;
+        }
+        alert("数値ではありません。("
+        + label
+        + ")");
+        obj.focus();
+        return false;
+    }
+    return true;
+}
+
+// 数値チェック
+function isNumber(val) {
+    // 値がセットされていない場合、不正
+    if (!val) return false;
+
+    // +、-、カンマ、ドットの削除
+    val = val.replace(/[\+,\-,\.,\,]/g, '');
+
+    // 整数
+    var re = /^\d*$/;
+
+    // 数値チェック
+    return re.test(val);
+}
+
+// クラス指定でチェック
+function exec() {
+    var elements = document.getElementsByClassName("num");
+    for (var i = 0; i < elements.length; i++) {
+        if (!check(elements[i])) {
+            return;
+        }
+    }
+}
+</script>
+
+</head>
+<body>
+<label for="test1">数値入力</label>
+<input type="text" id="test1" class="num" />
+<label for="test2">数値入力</label>
+<input type="text" id="test2" class="num chk" />
+<button onclick="exec();">チェック</button>
+</body>
+</html>

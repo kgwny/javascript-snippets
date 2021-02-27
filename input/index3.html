@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head><title></title></head>
+<body>
+<form metod="post" name="form1" action="result.html">
+氏名（必須）　　：<input type="text" name="input01" size="20"><br/>
+ふりがな（必須）：<input type="text" name="input02" size="20"><br/>
+<input type="submit" value="送信" onclick="return checkForm();">
+</form>
+<script type="text/javascript">
+function checkForm() {
+    if (document.form1.input01.value == "" || document.form1.input02.value == "") {
+        alert("必須項目を入力して下さい。");
+        return false;
+    } else {
+        return true;
+    }
+}
+</script>
+</body>
+</html>

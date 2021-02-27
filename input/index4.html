@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>テストページ</title>
+<script type="text/javascript">
+function check(obj) {
+    if (!isNumber(obj.value)) {
+        var label = "-";
+        if (document.querySelector('label[for="' + obj.id + '"]')) {
+            label = document.querySelector('label[for="' + obj.id + '"]').textContent;
+        }
+        alert("数値ではありません。("
+        + label
+        + ")");
+        obj.focus();
+    }
+}
+
+// 数値チェック
+function isNumber(val) {
+    // 値がセットされていない場合、不正
+    if (!val) return false;
+
+    // +、-、カンマ、ドットの削除
+    val = val.replace(/[\+,\-,\.,\,]/g, '');
+
+    // 整数
+    var re = /^\d*$/;
+
+    return re.test(val);
+}
+</script>
+</head>
+
+<body>
+<label for="test1">数値入力</label>
+<input type="text" id="test1" onchange="check(this)" />
+</body>
+</html>
