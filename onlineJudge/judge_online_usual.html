@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<script type="text/javascript">
+window.addEventListener('load', function() {
+    alertFunction();
+
+    // オンライン時のみ実行する処理
+    window.addEventListener('online', function() {
+        checkOnline();
+    });
+    // オフライン時のみ実行する処理
+    window.addEventListener('offline', function() {
+        checkOnline();
+    });
+});
+
+function checkOnline() {
+    if (navigator.onLine) {
+        console.log("オンライン中");
+    } else {
+        console.log("オフラインになりました");
+    }
+}
+
+function alertFunction() {
+    window.alert("アラートです");
+}
+</script>
+</head>
+<body>
+<h1>online/offline判定</h1>
+</body>
+</html>
